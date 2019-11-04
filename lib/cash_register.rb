@@ -17,7 +17,7 @@ end
 
   def apply_discount
     if discount != 0
-      self.total = ( total * ())
+      self.total = ( total * (100.0 - discount.to_f)
       
     else 
       "There is no discount to appply."
