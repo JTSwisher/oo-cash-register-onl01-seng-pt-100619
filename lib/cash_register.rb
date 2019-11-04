@@ -13,6 +13,7 @@ end
     quantity.times do 
     items << item 
    end 
+   self.last_transaction = price * quantity
   end 
 
   def apply_discount
@@ -25,7 +26,7 @@ end
   end 
   
   def void_last_transaction
-    
+    self.total = self.total - self.last_transaction
   end 
   
 end 
